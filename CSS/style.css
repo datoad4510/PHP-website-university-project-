@@ -1,0 +1,353 @@
+:root{
+/*     --font_size: 16px; */
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    background-color: rgb(39, 23, 23);
+    height: 100%;
+}
+
+body {
+    width: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: rgb(0, 0, 0);
+    border: solid 3px rgb(26, 25, 25);
+    border-radius: 30px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: rgb(54, 50, 50);
+}
+
+header {
+    background-color: rgb(49, 46, 46);
+    width: 100%;
+
+}
+
+header ul {
+    
+    display: flex;
+}
+
+header ul li {
+    position: relative;
+    top: -10000px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex: 1;
+    list-style-type: none;
+    text-align: center;
+}
+
+#arrow-container {
+    top: 0px;
+    left: -40%;
+}
+
+
+
+
+header ul li a {
+    text-decoration: none;
+    color: rgb(173, 154, 41);
+    font-size: 1.2rem;
+/*     border-radius: 30px;
+    border: hidden 0px black;
+    transition: color 0.5s, border-radius 0.5s, background-color 0.5s, border 0.5s; */
+    position: relative;
+}
+
+header ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    background-color: yellow;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+header ul li a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+header ul li a:hover {
+
+    color: rgb(226, 194, 13);
+    /* border: solid 5px black;
+    border-radius: 30px;
+    background-color: black; */
+}
+
+footer {
+    width: 100%;
+    background-color: rgb(43, 41, 41);
+}
+
+footer ul {
+    width: 50%;
+    margin: 0 auto;
+    /* margin-left: 50%; */
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+footer ul li i {
+    color: rgb(163, 162, 162);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    transition: color 0.5s;
+
+    
+}
+
+footer ul li i:hover {
+    color: rgb(156, 135, 15);
+}
+
+.arrow {
+    color: rgb(163, 162, 162);
+}
+
+.arrow:hover {
+    animation-name: pretty_arrow;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+}
+
+section.landing-page {
+    background-image: url("../Images/background.jpg");
+    background-size: cover;
+    height: 90vh;
+}
+
+::selection {
+    background-color: rgb(173, 168, 168);
+}
+
+@keyframes pretty_arrow {
+    0% {}
+    50% { padding:0px 20px 0px 20px; border-radius: 30px; background-color: rgb(63, 60, 60);}
+    100% {}
+}
+
+@keyframes rotation {
+    0% {}
+    50% { transform: rotate(2deg);}
+    100% {}
+}
+
+.rotate:hover {
+    animation-name: rotation;
+    animation-duration: 2s;
+}
+
+section h1 {
+    padding-left: 10vw;
+    padding-top: 20vh;
+    color: rgb(247, 191, 9);
+    font-size: 8vw;
+
+    text-decoration: underline;
+    text-shadow: 2px 2px 8px #000000;
+}
+
+section.about-page {
+    background-color: rgb(39, 23, 23);
+    background-image: url("../Images/vaporwave.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 100vh;
+    
+
+}
+
+
+section.about-page p {
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 20vh;
+    color: rgb(247, 191, 9);
+    text-shadow: 2px 2px 8px #000000;
+    width: 75%;
+    margin: 0 auto;
+    text-indent: 5%;
+    line-height: 1.5;
+    overflow: hidden; /*clearfix*/
+}
+
+section.project-page{
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+section.project-page div.project {
+    flex-basis: 20vw; /*initial width*/
+    height: 40vh;
+    background: linear-gradient(180deg, rgba(39,23,23,1) 0%, rgb(255, 255, 255) 50%, rgba(39,23,23,1) 100%);
+    max-height: 200px;
+    min-width: 200px;
+    border: 3px solid rgb(14, 10, 10);
+    overflow: hidden;
+    box-shadow: 10px 10px 8px 10px #1d1010;
+}
+
+section.project-page div.project ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+section.project-page div.project h4 {
+    color: rgb(226, 194, 13);
+}
+
+section.project-page div.project ul li {
+    padding-top: 3vh;
+}
+
+.link-text {
+    border: 1px solid rgb(4, 4, 10);
+    
+    background-color: rgb(168, 206, 211);
+    text-decoration: none;
+    transition: 1s border-radius, color 1s, background-color 1s;
+}
+
+.link-text:hover {
+border-radius: 7px;
+background-color: rgb(61, 54, 54);
+color: yellow;
+}
+
+#about-page-img {
+    float: left;
+    border: 2px dashed rgb(161, 161, 87);
+    width: 30vw;
+    height: 30vh;
+    margin-right: 5px;
+
+}
+
+#about-dummy-div{
+    margin-bottom: 50vh;
+}
+
+#contact-form {
+    margin-top: 20vh;
+    margin-left: 10vw;
+    margin-bottom: 60vh;
+    color: rgb(226, 194, 13);
+}
+
+#contact-body .container {
+    background-image: url("../Images/vaporwave.jpg");
+    height: 90vh;
+}
+
+@media only screen and (max-width: 430px) {
+  section.project-page {
+      display: block;
+  }
+
+  section {
+      overflow: scroll;
+  }
+
+}
+
+#blank-html {
+    background: none;
+}
+
+#contact-body {
+    border-radius: 7px;
+}
+
+.form-container {
+    background-color: grey;
+    border-radius: 15px;
+    text-align: center;
+    overflow: none;
+    margin: 40px auto;
+    padding: 20px;
+    display: table; /* es apataravebs, magdastan vnaxe */
+    margin-bottom: 60vh;
+}
+
+input {
+  margin-top: 2vh;
+  border: 1px solid #fcba03;
+  border-radius: 40px;
+  background-color: hsl(45, 100%, 98%);
+  color: #102510;
+}
+
+
+textarea {
+    margin-top: 1vh;
+    width: 50vw;
+    resize: none;
+    border: 1px solid #fcba03;
+
+}
+
+label {
+    margin-top: 3vh;
+}
+
+form h4 {
+    margin-top: 3vh;
+}
+
+
+select {
+    margin-top: 3vh;
+}
+
+.project-explanation {
+    text-align: center;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0.5px;
+    text-transform: none;
+    text-decoration: underline;
+    background-color: white;
+}
+
+#signup-link {
+    border: solid yellow 1px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+    color: black;
+}

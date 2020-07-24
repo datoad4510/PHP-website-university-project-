@@ -1,0 +1,151 @@
+:root {
+  /*     --font_size: 16px; */
+  font-size: 16px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  background-color: rgb(62, 218, 132);
+  height: 100%;
+}
+
+#welcome-text {
+  text-align: center;
+  background-color: rgb(212, 82, 35);
+}
+
+#admin-link {
+  margin-bottom: 5vh;
+  color: rgb(0, 0, 0);
+  text-decoration-line: none;
+  margin-left: 3vw;
+  border: rgb(20, 29, 20) 1px solid;
+  border-radius: 30px;
+  background-color: rgb(64, 122, 31);
+}
+
+#user-link {
+  margin-bottom: 5vh;
+  color: rgb(0, 0, 0);
+  text-decoration-line: none;
+  margin-left: 3vw;
+  border: rgb(20, 29, 20) 1px solid;
+  border-radius: 30px;
+  background-color: rgb(64, 122, 31);
+}
+
+#adminpage-form {
+  border: rgb(20, 29, 20) 1px solid;
+  background-color: green;
+  display: table;
+
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+
+#userpage-form {
+  border: rgb(20, 29, 20) 1px solid;
+  background-color: green;
+  display: table;
+
+  border-radius: 30px;
+  margin: 0 auto;
+  margin-top: 4vh;
+  margin-bottom: 4vh;
+  padding-left: 5%;
+}
+
+body {
+  width: 100%;
+}
+
+#left-content {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#right-content {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+#content-container {
+  overflow: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+#container-container {
+  text-align: center;
+  border: rgb(20, 29, 20) 1px solid;
+  background-color: green;
+  border-radius: 30px;
+
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+#left-content img {
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+#right-content img {
+  margin-right: 2px;
+  margin-bottom: 2px;
+}
+
+#admin-table {
+  margin: 0 auto;
+  text-align: center;
+  background-color: green;
+}
+
+#logging-container {
+  display: table;
+  margin: 0 auto;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  background-color: green;
+  text-align: center;
+  border-radius: 10px;
+  border: rgb(20, 29, 20) 1px solid;
+  padding: 5% 5% 5% 5%;
+}
+
+#logged-data {
+  margin-top: 5%;
+  padding-top: 5%;
+  background-color: greenyellow;
+  border-radius: 10px;
+  border: rgb(20, 29, 20) 1px solid;
+}
+
+#table-heading {
+  font-style: italic;
+  font-size: 30px;
+  padding: 10px 10px 10px 10px;
+}
+
+#verification-body {
+  text-align: center;
+}
+
+#verification-info {
+  margin-bottom: 3vh;
+}
+
+.admin {
+  color: rgb(151, 0, 0);
+}
